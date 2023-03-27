@@ -125,7 +125,7 @@ void (*op_func)(stack_t**, unsigned int);
 if (init_stack(&stack) == EXIT_FAILURE)
 return (EXIT_FAILURE);
 
-while (get_line(&line, &len, script_fd) != -1)
+while (getline(&line, &len, script_fd) != -1)
 {
 line_number++;
 op_toks = strtow(line, DELIMS);
